@@ -5,7 +5,7 @@ fixtures:
       ref: "4.15.0"
     nodejs:
       repo: "https://github.com/ipcrm/puppet-nodejs.git"
-      ref: "87895c9cef7f26bf2ac24a809959d5398bd5b982"
+      ref: "windows_npm"
     app_modeling:
       repo: "https://github.com/puppetlabs/puppetlabs-app_modeling.git"
       ref: "0.2.0"
