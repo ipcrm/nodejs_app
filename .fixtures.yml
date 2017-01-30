@@ -12,6 +12,9 @@ fixtures:
     vcsrepo:
       repo: "https://github.com/puppetlabs/puppetlabs-vcsrepo.git"
       ref: "1.5.0"
+    chocolatey:
+      repo: "https://github.com/puppetlabs/puppetlabs-chocolatey"
+      ref: "2.0.1"
   symlinks:
     nodejs_app: "#{source_dir}"
     nodejs: "/Users/mcadorette/git/nodejs"
