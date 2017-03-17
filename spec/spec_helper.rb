@@ -18,4 +18,5 @@ end
 RSpec.configure do |c|
   # Readable test descriptions
   c.formatter = :documentation
+  c.color = true
 end
