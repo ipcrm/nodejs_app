@@ -63,11 +63,11 @@ describe 'nodejs_app', :type => :application do
           case facts[:osfamily]
           when 'windows'
 
-            it { should contain_file('C:\\nodejsapps').with(
+            it { should contain_file('C:\nodejsapps').with(
               'ensure' => 'directory',
             ) }
 
-            it { should contain_vcsrepo('C:\\nodejsapps\\hello_world').with(
+            it { should contain_vcsrepo('C:\nodejsapps\hello_world').with(
               'ensure'   => 'present',
               'provider' => 'git',
               'source'   => 'https://github.com/ipcrm/nodejs_hello_world.git',
@@ -75,7 +75,7 @@ describe 'nodejs_app', :type => :application do
             )}
 
             it { should contain_exec('pm2_start_hello_world').with(
-              'cwd'     => 'C:\\nodejsapps\\hello_world',
+              'cwd'     => 'C:\nodejsapps\hello_world',
               'command' => 'pm2 start hello_world.config.js',
               'unless'  => 'pm2 show hello_world | findstr online',
             )}

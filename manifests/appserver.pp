@@ -7,7 +7,7 @@ define nodejs_app::appserver (
 
   case $::kernel {
     'windows': {
-      $_vcsroot  = 'C:\\nodejsapps'
+      $_vcsroot  = 'C:\nodejsapps'
     }
     default: {
       $_vcsroot  = '/opt/nodejsapps'

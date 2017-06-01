@@ -17,11 +17,14 @@ def location_from_env(env, default_location = [])
 end
 group :development, :unit_tests do
   gem 'metadata-json-lint'
+  gem 'puppet_facts'
   gem 'puppet-blacksmith', '>= 3.4.0'
   gem 'puppetlabs_spec_helper', '>= 1.2.1'
   gem 'simplecov'
   gem 'simplecov-console'
-  gem 'rspec-puppet'
+  gem 'rspec-puppet', :git => 'https://github.com/rodjek/rspec-puppet.git',
+                      :ref => 'eaba657a8e876c8c4a881a6d47df76cfdda62b3f'
+  gem 'puppet-syntax', '>= 2.4.0'
   gem 'rspec-puppet-facts'
   gem 'parallel_tests'
   gem 'rubocop', '0.41.2' if RUBY_VERSION < '2.0.0'
@@ -30,10 +33,7 @@ group :development, :unit_tests do
   gem 'json_pure', '<= 2.0.1' if RUBY_VERSION < '2.0.0'
 end
 group :system_tests do
-  gem 'beaker',        :git => 'https://github.com/ipcrm/beaker.git',
-                       :ref => 'a60391e0dc257b87ff372bbffd424d1c46e4b55d'
-  gem 'puppet-syntax', :git => 'https://github.com/ipcrm/puppet-syntax.git',
-                       :ref => 'cb51026e5664aad04a4162ba254b75dca8bf10d6'
+  gem 'beaker', '>= 3.16.0'
   gem 'beaker-rspec'
   gem 'serverspec'
   gem 'beaker-puppet_install_helper'
